@@ -32,14 +32,14 @@ j = 0
 
 while j < len(obs):
     rate(500)
-    barrow = obs[j]
+    barrel = obs[j]
     B_net = vector(0,0,0)
     r = obs[j].pos - rin.pos
     rhat = r/r.mag
     B = (Mu0 * N * I)/(2*pi*r.mag) 
     rperp = rotate(r, angle = pi/2, axis=vector(0,1,0))
     B_net = B * rperp
-    barrow.axis = B_net * sf
+    barrel.axis = B_net * sf
 
     print(r)
     print(rperp)
